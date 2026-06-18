@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{alltt, fancyvrb, url}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[italian]{babel}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[italian]{cleveref}
+\usepackage{acronym}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+
+\sloppy
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Requirements Breakdown Structure (RBS)}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Goal:} entro un anno sviluppare un'applicazione software per gestire le colonnine di ricarica dell'azienda in
+modo da ottenere un aumento del fatturato del 10\% entro l'anno successivo.
+\begin{enumerate}
+    \item Fornire agli utenti un'esperienza personalizzata in base al proprio profilo;
+    \begin{enumerate}
+        \item registrazione di un nuovo utente;
+        \begin{enumerate}
+            \item creazione di un database per gli account degli utenti;
+            \item adozione di misure di sicurezza per proteggere i dati degli utenti;
+        \end{enumerate}
+        \item login di un utente registrato;
+        \item registrazione e gestione di auto da parte degli utenti;
+        \item memorizzazione delle impostazioni personalizzate;
+        \item modifica dati dell'account.
+    \end{enumerate}
+    \item mostrare agli utenti le colonnine di ricarica presenti entro un raggio variabile rispetto alla posizione
+    dell'utente e la loro disponibilità in tempo reale;
+    \begin{enumerate}
+        \item integrazione con il database contenente le posizioni delle colonnine di ricarica;
+        \item visualizzazione delle colonnine di ricarica, differenziandole in base allo stato, su una mappa
+        interattiva centrata sulla posizione dell'utente;
+        \item aggiornamento del software delle colonnine di ricarica per inviare aggiornamenti in tempo reale sulla
+        loro disponibilità;
+    \end{enumerate}
+    \item dare agli utenti la possibilità di avviare/interrompere una ricarica presso una colonnina di una propria auto
+    registrata;
+    \begin{enumerate}
+        \item aggiunta della nozione di ricarica nei dati dei database;
+        \item aggiornamento del software delle colonnine di ricarica per associare una ricarica ad un'auto registrata
+        con l'applicazione;
+        \item aggiunta funzionalità per avviare una ricarica associando un'auto registrata con una colonnina di ricarica;
+    \end{enumerate}
+    \item permettere agli utenti di pianificare un itinerario di viaggio per ottenere un percorso comprendente le soste
+    di ricarica necessarie.
+    \begin{enumerate}
+        \item generazione di un percorso ottimizzato rispetto al tempo di percorrenza, che consideri le soste di ricarica
+        necessarie in base alla batteria dell'auto utilizzata per il viaggio.
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Rischi, ostacoli ed assunzioni}
+Relativamente alla numerazione dei requisiti, si possono individuare i seguenti rischi, ostacoli ed assunzioni:
+\begin{itemize}
+    \item 2.1 - \textbf{assunzione}: esiste già un database contenente le informazioni relative alle colonnine di ricarica;
+    \item 2.3, 3.2 - \textbf{rischio}: introduzione di bug nel software delle colonnine di ricarica;
+    \item 4.1 - \textbf{rischio}: incertezza nella realizzazione di un algoritmo per generare il percorso ottimizzato.
+\end{itemize}
+
+\end{document}
