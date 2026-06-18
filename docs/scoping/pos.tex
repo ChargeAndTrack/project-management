@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{alltt, fancyvrb, url}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[italian]{babel}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[italian]{cleveref}
+\usepackage{acronym}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\sloppy
+\setlength{\parindent}{0pt}
+
+\title{\textbf{POS}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Opportunità}
+L'azienda ChargeAndTrack gestisce una distribuzione di colonnine di ricarica per auto elettriche in tutta Italia.
+Da analisi di mercato è emersa una mancanza di offerta di soluzioni digitali per la ricerca e l'utiizzo di colonnine
+di ricarica.
+
+\section{Goal}
+Entro un anno sviluppare un'applicazione software per gestire le colonnine di ricarica dell'azienda in modo da ottenere
+un aumento del fatturato del 10\% entro l'anno successivo.
+
+\section{Obiettivi}
+\begin{enumerate}
+    \item Fornire agli utenti un'esperienza personalizzata in base al proprio profilo;
+    \item mostrare agli utenti le colonnine di ricarica presenti entro un raggio variabile rispetto alla posizione
+    dell'utente e la loro disponibilità in tempo reale;
+    \item dare agli utenti la possibilità di avviare/interrompere una ricarica presso una colonnina di una propria auto
+    registrata;
+    \item permettere agli utenti di pianificare un itinerario di viaggio per ottenere un percorso comprendente le soste
+    di ricarica necessarie.
+\end{enumerate}
+
+\subsection{Rischi, ostacoli ed assunzioni}
+
+Relativamente alla numerazione degli obiettivi, si possono individuare i seguenti rischi, ostacoli ed assunzioni:
+\begin{enumerate}
+    \item Ostacolo: bisogna mettere in atto misure per garantire la privacy degli utenti;
+    \item Rischio: in alcune zone con basso segnale, l'aggiornamento della disponibilità delle colonnine di ricarica
+    potrebbe subire dei ritardi;
+    \item Assunzione: le colonnine di ricarica sono già dotate dell'hardware necessario per supportare le funzionalità
+    richieste dall'applicazione;
+\end{enumerate}
+
+\section{Conditions of Satisfaction (CoS)}
+\begin{itemize}
+    \item L'applicazione deve essere implementata come web app e app mobile;
+    \item l'applicazione deve essere completata entro un anno;
+    \item non superare il budget di 200.000 euro;
+    \item prestare particolare attenzione alla User Experience (UX);
+    \item il percorso generato per un itinerario di viaggio deve essere ottimizzato rispetto al tempo di percorrenza.
+\end{itemize}
+
+\end{document}
