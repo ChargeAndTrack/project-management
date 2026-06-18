@@ -1,0 +1,328 @@
+## Core latex/pdflatex auxiliary files:
+**/docs/**/*.aux
+**/docs/**/*.lof
+**/docs/**/*.log
+**/docs/**/*.lot
+**/docs/**/*.fls
+**/docs/**/*.out
+**/docs/**/*.toc
+**/docs/**/*.fmt
+**/docs/**/*.fot
+**/docs/**/*.cb
+**/docs/**/*.cb2
+**/docs/**/.*.lb
+
+## Intermediate documents:
+**/docs/**/*.dvi
+**/docs/**/*.xdv
+*-converted-to.*
+# these rules might exclude image files for figures etc.
+**/docs/**/*.ps
+**/docs/**/*.eps
+**/docs/**/*.pdf
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+**/docs/**/*.bbl
+**/docs/**/*.bbl-SAVE-ERROR
+**/docs/**/*.bcf
+**/docs/**/*.bcf-SAVE-ERROR
+**/docs/**/*.blg
+**/docs/**/*-blx.aux
+**/docs/**/*-blx.bib
+**/docs/**/*.run.xml
+
+## Build tool auxiliary files:
+**/docs/**/*.fdb_latexmk
+**/docs/**/*.synctex
+**/docs/**/*.synctex(busy)
+**/docs/**/*.synctex.gz
+**/docs/**/*.synctex.gz(busy)
+**/docs/**/*.pdfsync
+**/docs/**/*.rubbercache
+**/docs/**/rubber.cache
+
+## Build tool directories for auxiliary files
+# latexrun
+**/docs/**/latex.out/
+
+## Auxiliary and intermediate files from other packages:
+# algorithms
+**/docs/**/*.alg
+**/docs/**/*.loa
+
+# achemso
+**/docs/**/acs-*.bib
+
+# amsthm
+**/docs/**/*.thm
+
+# attachfile2
+**/docs/**/*.atfi
+
+# beamer
+**/docs/**/*.nav
+**/docs/**/*.pre
+**/docs/**/*.snm
+**/docs/**/*.vrb
+
+# changes
+**/docs/**/*.soc
+**/docs/**/*.loc
+
+# comment
+**/docs/**/*.cut
+
+# context
+**/docs/**/*.tuc
+**/docs/**/*.tui
+**/docs/**/*.tuo
+
+# cprotect
+**/docs/**/*.cpt
+
+# elsarticle (documentclass of Elsevier journals)
+**/docs/**/*.spl
+
+# endnotes
+**/docs/**/*.ent
+
+# fixme
+**/docs/**/*.lox
+
+# feynmf/feynmp
+**/docs/**/*.mf
+**/docs/**/*.mp
+**/docs/**/*.t[1-9]
+**/docs/**/*.t[1-9][0-9]
+**/docs/**/*.tfm
+
+#(r)(e)ledmac/(r)(e)ledpar
+**/docs/**/*.end
+**/docs/**/*.?end
+**/docs/**/*.[1-9]
+**/docs/**/*.[1-9][0-9]
+**/docs/**/*.[1-9][0-9][0-9]
+**/docs/**/*.[1-9]R
+**/docs/**/*.[1-9][0-9]R
+**/docs/**/*.[1-9][0-9][0-9]R
+**/docs/**/*.eledsec[1-9]
+**/docs/**/*.eledsec[1-9]R
+**/docs/**/*.eledsec[1-9][0-9]
+**/docs/**/*.eledsec[1-9][0-9]R
+**/docs/**/*.eledsec[1-9][0-9][0-9]
+**/docs/**/*.eledsec[1-9][0-9][0-9]R
+
+# glossaries
+**/docs/**/*.acn
+**/docs/**/*.acr
+**/docs/**/*.glg
+**/docs/**/*.glg-abr
+**/docs/**/*.glo
+**/docs/**/*.glo-abr
+**/docs/**/*.gls
+**/docs/**/*.gls-abr
+**/docs/**/*.glsdefs
+**/docs/**/*.lzo
+**/docs/**/*.lzs
+**/docs/**/*.slg
+**/docs/**/*.slo
+**/docs/**/*.sls
+
+# makeindex's style files!
+**/docs/**/*.ist
+
+# gnuplot
+**/docs/**/*.gnuplot
+**/docs/**/*.table
+
+# gnuplottex
+**/docs/**/*-gnuplottex-*
+
+# gregoriotex
+**/docs/**/*.gaux
+**/docs/**/*.glog
+**/docs/**/*.gtex
+
+# htlatex
+**/docs/**/*.4ct
+**/docs/**/*.4tc
+**/docs/**/*.idv
+**/docs/**/*.lg
+**/docs/**/*.trc
+**/docs/**/*.xref
+
+# hypdoc
+**/docs/**/*.hd
+
+# hyperref
+**/docs/**/*.brf
+
+# knitr
+**/docs/**/*-concordance.tex
+# knitr generated tikz files
+**/docs/**/*.tikz
+**/docs/**/*-tikzDictionary
+
+# latexindent will create succesive backup files by default
+#*.bak*
+
+# listings
+**/docs/**/*.lol
+
+# luatexja-ruby
+**/docs/**/*.ltjruby
+
+# makeidx
+**/docs/**/*.idx
+**/docs/**/*.ilg
+**/docs/**/*.ind
+
+# minitoc
+**/docs/**/*.maf
+**/docs/**/*.mlf
+**/docs/**/*.mlt
+**/docs/**/*.mtc[0-9]*
+**/docs/**/*.slf[0-9]*
+**/docs/**/*.slt[0-9]*
+**/docs/**/*.stc[0-9]*
+
+# minted
+**/docs/**/_minted*
+**/docs/**/*.data.minted
+**/docs/**/*.pyg
+
+# morewrites
+**/docs/**/*.mw
+
+# newpax
+**/docs/**/*.newpax
+
+# nomencl
+**/docs/**/*.nlg
+**/docs/**/*.nlo
+**/docs/**/*.nls
+
+# pax
+**/docs/**/*.pax
+
+# pdfpcnotes
+**/docs/**/*.pdfpc
+
+# sagetex
+**/docs/**/*.sagetex.sage
+**/docs/**/*.sagetex.py
+**/docs/**/*.sagetex.scmd
+
+# scrwfile
+**/docs/**/*.wrt
+
+# spelling
+**/docs/**/*.spell.bad
+**/docs/**/*.spell.txt
+
+# svg
+**/docs/**/svg-inkscape/
+
+# sympy
+**/docs/**/*.sout
+**/docs/**/*.sympy
+**/docs/**/sympy-plots-for-*.tex/
+
+# pdfcomment
+**/docs/**/*.upa
+**/docs/**/*.upb
+
+# pythontex
+**/docs/**/*.pytxcode
+**/docs/**/pythontex-files-*/
+
+# tcolorbox
+**/docs/**/*.listing
+
+# thmtools
+**/docs/**/*.loe
+
+# TikZ & PGF
+**/docs/**/*.dpth
+**/docs/**/*.md5
+**/docs/**/*.auxlock
+
+# titletoc
+**/docs/**/*.ptc
+
+# todonotes
+**/docs/**/*.tdo
+
+# vhistory
+**/docs/**/*.hst
+**/docs/**/*.ver
+
+# easy-todo
+**/docs/**/*.lod
+
+# xcolor
+**/docs/**/*.xcp
+
+# xmpincl
+**/docs/**/*.xmpi
+
+# xindy
+**/docs/**/*.xdy
+
+# xypic precompiled matrices and outlines
+**/docs/**/*.xyc
+**/docs/**/*.xyd
+
+# endfloat
+**/docs/**/*.ttt
+**/docs/**/*.fff
+
+# Latexian
+**/docs/**/TSWLatexianTemp*
+
+## Editors:
+# WinEdt
+**/docs/**/*.bak
+**/docs/**/*.sav
+
+# latexindent.pl
+**/docs/**/*.bak[0-9]*
+
+# Texpad
+**/docs/**/.texpadtmp
+
+# LyX
+**/docs/**/*.lyx~
+
+# Kile
+**/docs/**/*.backup
+
+# gummi
+**/docs/**/.*.swp
+
+# KBibTeX
+**/docs/**/*~[0-9]*
+
+# TeXnicCenter
+**/docs/**/*.tps
+
+# auto folder when using emacs and auctex
+./**/docs/**/auto/*
+**/docs/**/*.el
+
+# expex forward references with \gathertags
+**/docs/**/*-tags.tex
+
+# standalone packages
+**/docs/**/*.sta
+
+# Makeindex log files
+**/docs/**/*.lpz
+
+# xwatermark package
+**/docs/**/*.xwm
+
+# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
+# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
+# Uncomment the next line to have this generated file ignored.
+**/docs/**/*Notes.bib
