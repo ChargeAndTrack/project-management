@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{alltt, fancyvrb, url}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[italian]{babel}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[italian]{cleveref}
+\usepackage{acronym}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+
+\sloppy
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Requirements prioritized}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+In riferimento al RBS definito, prioritizziamo i requisiti in due categorie: \textit{Must} e \textit{Nice to have}. I
+requisiti \textit{Must} sono quelli che devono essere implementati per garantire il successo del progetto, mentre i
+requisiti \textit{Nice to have} sono quelli che possono essere implementati se le risorse e il tempo lo permettono, ma
+non sono essenziali per il successo del progetto. Nella \cref{table:requirements_prioritized} sono elencati i requisiti
+delle foglie del RBS secondo le due categorie.
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Must  & Nice to have \\
+        \hline
+        1.1.1 & 1.4          \\
+        1.1.2 &              \\
+        1.1.3 &              \\
+        1.2   &              \\
+        1.3   &              \\
+        1.5   &              \\
+        2.1   &              \\
+        2.2   &              \\
+        2.3   &              \\
+        3.1   &              \\
+        3.2   &              \\
+        3.3   &              \\
+        4.1   &              \\
+        4.2   &              \\
+        5.1   &              \\
+        5.2   &              \\    
+        \hline
+    \end{tabular}
+    \caption{Prioritizzazione dei requisiti del RBS.}
+    \label{table:requirements_prioritized}
+\end{table}
+
+\end{document}

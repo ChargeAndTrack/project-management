@@ -1,0 +1,147 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{alltt, fancyvrb, url}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[italian]{babel}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[italian]{cleveref}
+\usepackage{acronym}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+
+\sloppy
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Work Breakdown Structure (WBS)}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+Considerando la CoS 1 specificata nel POS, che prevede che l'applicazione debba essere implementata come web app e app
+mobile, suddividiamo la WBS in due parti, una per la web app e una per l'app mobile.\\
+
+\section{WBS per la web app}
+\textbf{Goal:} entro un anno sviluppare un'applicazione software per gestire le colonnine di ricarica dell'azienda in
+modo da ottenere un aumento del fatturato del 10\% entro l'anno successivo.
+\begin{enumerate}
+    \item Fornire agli utenti un'esperienza personalizzata in base al proprio profilo;
+    \begin{enumerate}
+        \item registrazione di un nuovo utente;
+        \begin{enumerate}
+            \item creazione di un database per gli account degli utenti;
+            \item adozione di misure di sicurezza per proteggere i dati degli utenti;
+            \begin{enumerate}
+                \item implementazione di autenticazione a due fattori;
+                \item memorizzazione di dati sensibili in maniera criptata;
+                \item gestione sicura delle sessioni;
+            \end{enumerate}
+            \item implementazione della funzionalità di registrazione di un nuovo utente;
+            \begin{enumerate}
+                \item creazione di una schermata per la registrazione di un nuovo utente;
+                \item implementazione della logica per la registrazione di un nuovo utente;
+            \end{enumerate}
+        \end{enumerate}
+        \item login di un utente registrato;
+        \begin{enumerate}
+            \item creazione di una schermata per il login di un utente registrato;
+            \item implementazione della logica per il login di un utente registrato;
+        \end{enumerate}
+        \item registrazione e gestione di auto da parte degli utenti;
+        \begin{enumerate}
+            \item creazione di una schermata per la registrazione di auto da parte degli utenti;
+            \item creazione di una schermata per la gestione delle auto registrate;
+            \item implementazione della logica per la registrazione di auto da parte degli utenti;
+            \item implementazione della logica per la gestione delle auto registrate;
+        \end{enumerate}
+        \item memorizzazione delle impostazioni personalizzate;
+        \begin{enumerate}
+            \item memorizzazione e gestione del tema scelto dall'utente;
+            \item memorizzazione e gestione dell'organizzazione personalizzata dei contenuti dell'home page;
+        \end{enumerate}
+        \item modifica dati dell'account;
+        \begin{enumerate}
+            \item creazione di una schermata per la visualizzazione e la modifica dei dati dell'account;
+            \item implementazione della logica per la visualizzazione e la modifica dei dati dell'account;
+        \end{enumerate}
+    \end{enumerate}
+    \item mostrare agli utenti le colonnine di ricarica presenti entro un raggio variabile rispetto alla posizione
+    dell'utente e la loro disponibilità in tempo reale;
+    \begin{enumerate}
+        \item integrazione con il database contenente le posizioni delle colonnine di ricarica;
+        \item visualizzazione delle colonnine di ricarica, differenziandole in base allo stato, su una mappa
+        interattiva centrata sulla posizione dell'utente;
+        \begin{enumerate}
+            \item creazione di una schermata per la visualizzazione delle colonnine di ricarica su una mappa interattiva
+            centrata sulla posizione dell'utente;
+            \item aggiunta della differenziazione nella visualizzazione delle colonnine di ricarica in base al loro stato;
+            \item implementazione della logica per la visualizzazione delle colonnine di ricarica su una mappa interattiva;
+            \item gestione della posizione dell'utente;
+        \end{enumerate}
+        \item aggiornamento del software delle colonnine di ricarica per inviare aggiornamenti in tempo reale sulla
+        loro disponibilità;
+        \begin{enumerate}
+            \item implementazione all'interno del software delle colonnine di ricarica della gestione della disponibilità
+            delle colonnine di ricarica;
+            \item implementazione all'interno del software delle colonnine di ricarica dell'invio della disponibilità
+            delle colonnine di ricarica;
+        \end{enumerate}
+    \end{enumerate}
+    \item dare agli utenti la possibilità di avviare/interrompere una ricarica presso una colonnina di una propria auto
+    registrata;
+    \begin{enumerate}
+        \item aggiunta della nozione di ricarica nei dati dei database;
+        \item aggiornamento del software delle colonnine di ricarica per associare una ricarica ad un'auto registrata
+        con l'applicazione;
+        \begin{enumerate}
+            \item implementazione all'interno del software delle colonnine di ricarica della gestione dell'associazione
+            di una ricarica ad un'auto registrata;
+            \item implementazione all'interno del software delle colonnine di ricarica della comunicazione con l'applicazione
+            per della disponibilità delle colonnine di ricarica;
+        \end{enumerate}
+        \item aggiunta funzionalità per avviare una ricarica associando un'auto registrata con una colonnina di ricarica;
+        \begin{enumerate}
+            \item creazione di una schermata per avviare una ricarica;
+            \item implementazione della logica per avviare una ricarica;
+            \item implementazione della logica per interrompere una ricarica in corso;
+        \end{enumerate}
+    \end{enumerate}
+    \item permettere agli utenti di ricevere aggiornamenti in tempo reale sulla ricarica di una propria auto;
+    \begin{enumerate}
+        \item aggiornamento del software delle colonnine di ricarica per inviare periodicamente aggiornamenti sul
+        livello di batteria dell'auto in carica;
+        \item aggiunta di una funzionalità per ricevere e mostrare aggiornamenti in tempo reale sulla ricarica di una propria auto;
+        \begin{enumerate}
+            \item creazione di una schermata per mostrare le proprie auto in carica con il rispettivo livello di batteria
+            che viene aggiornato in tempo reale;
+            \item implementazione della logica per ricevere e mostrare aggiornamenti in tempo reale sulle ricariche;
+        \end{enumerate}
+    \end{enumerate}
+    \item permettere agli utenti di pianificare un itinerario di viaggio per ottenere un percorso comprendente le soste
+    di ricarica necessarie.
+    \begin{enumerate}
+        \item generazione di un percorso ottimizzato rispetto al tempo di percorrenza, che consideri le soste di ricarica
+        necessarie in base alla batteria dell'auto utilizzata per il viaggio
+        \begin{enumerate}
+            \item raccolta e pulizia dei dati necessari alla generazione;
+            \item implementazione di un algoritmo per generare un percorso ottimizzato rispetto al tempo di percorrenza,
+            che consideri le soste di ricarica necessarie in base alla batteria dell'auto utilizzata per il viaggio;
+        \end{enumerate}
+        \item implementazione di una schermata per la pianificazione di un viaggio.
+    \end{enumerate}
+\end{enumerate}
+
+\section{WBS per l'app mobile}
+
+\end{document}
