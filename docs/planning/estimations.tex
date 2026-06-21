@@ -33,15 +33,15 @@
 \section{Stima della quantità di lavoro}
 Per ogni task della WBS è stata effettuata una stima della quantità di lavoro necessaria per completarla, utilizzando
 una tecnica \textit{consensus-based}. Nello specifico, per i task con una bassa complessità e grado di incertezza è
-stato utilizzato il \textit{Three-Point Method}, basandosi sulle tre stime (ottimistica, pessimistica e più probabile)
+stato utilizzato il metodo \textit{Three-Point}, basandosi sulle tre stime (ottimistica, pessimistica e più probabile)
 di una figura esperta in quell'attività, per poi calcolare la stima finale come media ponderata delle tre stime,
 utilizzando la formula:
 \begin{center}
     $E = \frac{O + 4M + P}{6}$
 \end{center}
 Mentre per i task con una complessità e grado di incertezza più elevati è stato utilizzata la tecnica \textit{Delphi},
-nella quale i componenti principali del team hanno fornito le proprie stime, ed in maniera iterativa si discute per un
-massimo di 3 round, fino a convergere ad una stima finale che equivale a quella più votata. 
+nella quale i componenti principali del team forniscono le proprie stime, ed in maniera iterativa si discute per un
+massimo di 3 round, fino a convergere ad una stima finale che equivale a quella più votata.
 
 \subsection{Attività 1.2.1}
 Stimiamo con il metodo \textit{Three-Point}:
@@ -121,7 +121,54 @@ Stimiamo con la tecnica \textit{Delphi}:
 Dunque la stima finale è di 7 giorni, in quanto è la stima più votata al termine del terzo round.
 
 \section{Stima delle risorse necessarie}
+Il team di sviluppo è composto da 10 membri, di cui 5 sono specializzati nel frontend e 5 nel backend, e i team sono
+organizzati in maniera orizzontale. Per questa ragione, i task saranno assegnati durante l'esecuzione del progetto in
+base alla disponibilità dei membri del team. Tuttavia, è stata effettuata una stima del numero di risorse (sviluppatori)
+necessarie per ogni task. Nella \Cref{table:resources_estimated} sono riportati alcuni esempi di stime.
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Attività & Categoria & Numero di risorse \\
+        \hline
+        1.1.1   & Backend  & 2  \\
+        \hline
+        1.1.2.1 & Backend  & 1  \\
+        \hline
+        1.2.1   & Frontend & 1  \\
+        \hline
+        4.2.1   & Frontend & 2  \\
+        \hline
+        4.2.2   & Backend  & 2  \\
+        \hline
+        5.1.2   & Backend  & 3  \\
+        \hline
+    \end{tabular}
+    \caption{Stima del numero di risorse necessarie per ogni attività.}
+    \label{table:resources_estimated}
+\end{table}
 
 \section{Stima della durata}
+Per stimare la durata di ogni task ci si basa sulla stima della quantità di lavoro effettuata e sul numero di risorse
+stimate. Nel caso in cui il numero di risorse stimate sia 1, la durata del task è uguale alla stima della quantità di
+lavoro, mentre se il numero di risorse è maggiore, la durata del task consisterebbe nel rapporto tra la stima della
+quantità di lavoro e il numero di risorse, ma visto che la relazione non è lineare, si aggiusta in base ai dati storici.
+Nella \Cref{table:duration_estimated} sono riportati alcuni esempi di stime.
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Attività & Durata (giorni) \\
+        \hline
+        1.2.1    & 3  \\
+        \hline
+        4.2.2    & 5  \\
+        \hline
+    \end{tabular}
+    \caption{Stima della durata di ogni attività.}
+    \label{table:duration_estimated}
+\end{table}
 
 \end{document}
