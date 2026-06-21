@@ -1,0 +1,112 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{alltt, fancyvrb, url}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[italian]{babel}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[italian]{cleveref}
+\usepackage{acronym}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\sloppy
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Project Definition Statement (PDS)}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Opportunità}
+L'azienda ChargeAndTrack gestisce una distribuzione di colonnine di ricarica per auto elettriche in tutta Italia.
+E' stata effettuata un'analisi di mercato dei principali distributori di colonnine di ricarica sul territorio
+italiano, e si è riscontrato che nessuno di essi offre soluzioni digitali per la ricerca e l'utilizzo di
+colonnine di ricarica. Inoltre, è stata condotta un'indagine tra i clienti e si è riscontrato che il 70\% di essi
+sarebbe interessato ad una soluzione digitale. In particolare, ha trovato maggiore interesse la possibilità di
+pianificare un itinerario di viaggio con soste di ricarica, e la possibilità di ricevere aggiornamenti in tempo reale
+sulla ricarica di una propria auto.
+
+\section{Goal}
+Si vuole sviluppare un'applicazione software con le caratteristiche emerse dall'indagine con i clienti, in modo da
+aumentare il fatturato dell'azienda del 10\% entro un anno dal rilascio dell'applicazione.
+
+\section{Obiettivi}
+\begin{enumerate}
+    \item Fornire agli utenti un'esperienza personalizzata in base al proprio profilo;
+    \item mostrare agli utenti le colonnine di ricarica presenti entro un raggio variabile rispetto alla posizione
+    dell'utente e la loro disponibilità in tempo reale;
+    \item dare agli utenti la possibilità di avviare/interrompere una ricarica presso una colonnina di una propria auto
+    registrata;
+    \item permettere agli utenti di ricevere aggiornamenti in tempo reale sulla ricarica di una propria auto;
+    \item permettere agli utenti di pianificare un itinerario di viaggio per ottenere un percorso comprendente le soste
+    di ricarica necessarie.
+\end{enumerate}
+
+\subsection{Rischi, ostacoli ed assunzioni}
+
+Relativamente alla numerazione degli obiettivi, si possono individuare i seguenti rischi, ostacoli ed assunzioni:
+\begin{enumerate}
+    \item Ostacolo: bisogna mettere in atto misure per garantire la privacy degli utenti;
+    \item Rischio: in alcune zone con basso segnale, l'aggiornamento della disponibilità delle colonnine di ricarica
+    potrebbe subire dei ritardi;
+    \item Assunzione: le colonnine di ricarica sono già dotate dell'hardware necessario per supportare le funzionalità
+    richieste dall'applicazione;
+\end{enumerate}
+
+\section{Conditions of Satisfaction (CoS)}
+\begin{enumerate}
+    \item L'applicazione deve essere implementata come web app e app mobile;
+    \item l'applicazione deve essere completata entro un anno;
+    \item non superare il budget di 200.000 euro;
+    \item prestare particolare attenzione alla User Experience (UX);
+    \item il percorso generato per un itinerario di viaggio deve essere ottimizzato rispetto al tempo di percorrenza.
+\end{enumerate}
+
+\section{Criteri di successo}
+\begin{itemize}
+    \item Aumento del fatturato di almeno il 10\% entro un anno dal rilascio dell'applicazione, rispetto al fatturato
+    dell'anno 2025;
+    \item ottenere una valutazione media di almeno 7 punti su 10 da parte degli utenti entro un anno dal rilascio
+    dell'applicazione, considerando almeno 100 voti. La valutazione viene richiesta a tutti gli utenti almeno una volta
+    entro un anno dal rilascio dell'applicazione, tramite indagine interna all'applicazione, e se ne calcolerà la
+    media al termine della raccolta.
+\end{itemize}
+
+\section{Scelte}
+
+\subsection{Scelte architetturali}
+\begin{itemize}
+    \item In riferimento alla CoS 1, sviluppare prima una web app, e successivamente un'app mobile come wrapper
+    dell'applicazione web;
+    \item utilizzare un'architettura a microservizi per il backend, sfruttando Docker per la containerizzazione
+    dei microservizi e Kubernetes per il deploy e l'orchestrazione dei container;
+    \item ogni microservizio dovrà adottare un'architettura esagonale;
+\end{itemize}
+
+\subsection{Scelte tecnologiche}
+\begin{itemize}
+    \item dopo aver preso in considerazione database relazionali e documentali, si è deciso di utilizzare MongoDB come
+    database documentale per la sua flessibilità e scalabilità, che si adattano meglio alle esigenze dell'applicazione,
+    oltre ad essere il più conosciuto tra i membri del team;
+    \item lo sviluppo deve seguire un approccio di Test-Driven Development (TDD);
+    \item utilizzare Kotlin come linguaggio di programmazione per il backend, e Vue.js sfruttando TypeScript per il
+    frontend della web app;
+    \item in riferimento all'obiettivo 3, come metodo di associazione tra un'auto registrata e una colonnina di
+    ricarica, si è deciso di utilizzare un codice QR, in quanto già presente nel software delle colonnine di ricarica;
+    \item in riferimento all'obiettivo 1, l'autenticazione degli utenti avverrà tramite email e password, con
+    l'adozione dell'autenticazione a due fattori tramite l'invio di un codice temporaneo via email.
+\end{itemize}
+
+\end{document}

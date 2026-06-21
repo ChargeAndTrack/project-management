@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{alltt, fancyvrb, url}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[italian]{babel}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[italian]{cleveref}
+\usepackage{acronym}
+\usepackage{subcaption}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\sloppy
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Estimations}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Stima della quantità di lavoro}
+Per ogni task della WBS è stata effettuata una stima della quantità di lavoro necessaria per completarla, utilizzando
+una tecnica \textit{consensus-based}. Nello specifico, per i task con una bassa complessità e grado di incertezza è
+stato utilizzato il \textit{Three-Point Method}, basandosi sulle tre stime (ottimistica, pessimistica e più probabile)
+di una figura esperta in quell'attività, per poi calcolare la stima finale come media ponderata delle tre stime,
+utilizzando la formula:
+\begin{center}
+    $E = \frac{O + 4M + P}{6}$
+\end{center}
+Mentre per i task con una complessità e grado di incertezza più elevati è stato utilizzata la tecnica \textit{Delphi},
+nella quale i componenti principali del team hanno fornito le proprie stime, ed in maniera iterativa si discute per un
+massimo di 3 round, fino a convergere ad una stima finale che equivale a quella più votata. 
+
+\subsection{Attività 1.2.1}
+Stimiamo con il metodo \textit{Three-Point}:
+\begin{itemize}
+    \item Stima ottimistica (O): 2 giorni
+    \item Stima più probabile (M): 3 giorni
+    \item Stima pessimistica (P): 5 giorni
+\end{itemize}
+\begin{center}
+    $E = \frac{2 + 4*3 + 5}{6} = 3.17$ giorni
+\end{center}
+
+\subsection{Attività 4.2.2}
+Stimiamo con la tecnica \textit{Delphi}:
+
+\begin{table}[!htb]
+    \footnotesize
+    \centering
+    
+    \begin{subtable}[t]{0.3\textwidth}
+        \centering
+        \begin{tabular}[t]{|c|c|}
+            \hline
+            Stima (giorni) & Voti \\
+            \hline
+            4 & 1          \\
+            \hline
+            6 & 1             \\
+            \hline
+            7 & 2             \\
+            \hline
+            10 & 1              \\
+            \hline
+            14 & 1             \\    
+            \hline
+        \end{tabular}
+        \caption{Round 1}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[t]{0.3\textwidth}
+        \centering
+        \begin{tabular}[t]{|c|c|}
+            \hline
+            Stima (giorni) & Voti \\
+            \hline
+            4 & 1          \\
+            \hline
+            6 & 1             \\
+            \hline
+            7 & 1             \\
+            \hline
+            8 & 2              \\
+            \hline
+            10 & 1             \\    
+            \hline
+        \end{tabular}
+        \caption{Round 2}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[t]{0.3\textwidth}
+        \centering
+        \begin{tabular}[t]{|c|c|}
+            \hline
+            Stima (giorni) & Voti \\
+            \hline
+            6 & 2             \\
+            \hline
+            7 & 3             \\
+            \hline
+            8 & 1             \\
+            \hline
+        \end{tabular}
+        \caption{Round 3}
+    \end{subtable}
+\end{table}
+
+Dunque la stima finale è di 7 giorni, in quanto è la stima più votata al termine del terzo round.
+
+\section{Stima delle risorse necessarie}
+
+\section{Stima della durata}
+
+\end{document}
