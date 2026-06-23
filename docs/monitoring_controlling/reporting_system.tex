@@ -14,6 +14,9 @@
 \usepackage[italian]{cleveref}
 \usepackage{acronym}
 \usepackage{subcaption}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.18}
 
 \renewcommand{\thesection}{\arabic{section}}
 
@@ -36,19 +39,95 @@ completate) in maniera continuativa, in modo che dalla Kanban board sia sempre p
 del progetto. Inoltre, in questo modo il Gantt chart viene aggiornato in maniera automatica, mostrando le percentuali
 di completamento dei task.
 
-\section{Current period reports}
-
 \section{Cumulative reports}
+Nella \cref{fig:cumulative-report} mostriamo un esempio di report cumulativo, effettuato dopo 6 mesi dall'inizio del
+progetto. Lo scostamento rispetto alla schedula, se positivo indica un ritardo, altrimenti un anticipo.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=12cm,
+            height=8cm,
+            xmin=0, xmax=9,
+            ymin=-3.5, ymax=3.5,
+            xtick={1,...,9},
+            ytick={-3,-2,-1,0,1,2,3},
+            grid=major,
+            xlabel={Mese},
+            ylabel={Scostamento da schedula},
+        ]
+            \addplot[
+                black,
+                thick
+            ] coordinates {
+                (0,0) (9,0)
+            };
+            \addplot[
+                only marks,
+                mark=*,
+            ]
+            coordinates {
+                (0,0)
+                (1,0.3)
+                (2,0)
+                (3,-0.5)
+                (4,-0.8)
+                (5,-1)
+                (6,-0.5)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Cumulative report di 6 mesi}
+    \label{fig:cumulative-report}
+\end{figure}
 
 \section{Exception reports}
+Nella \cref{fig:cumulative-report} si può notare come nel primo mese di lavoro il progetto abbia accumulato un lieve
+ritardo, probabilmente dovuto ad una sottostima del tempo di startup necessario. Successivamente, è stato recuperato il
+ritardo accumulato, arrivando ad essere in anticipo rispetto alla schedula. \\
+Tra il quinto e il sesto mese, si nota un nuovo ritardo, dovuto ad un problema nell'aggiornamento del software delle
+colonnine di ricarica, che ha richiesto più tempo del previsto; dato che il problema è stato compreso, per i prossimi
+aggiornamenti non ci si aspetta che si verifichi nuovamente. Pertanto, non è necessario intraprendere misure
+correttive, considerando anche il fatto che complessivamente il progetto è in anticipo rispetto alla schedula.
 
-\section{Stoplight reports}
+\section{Issues Log}
+Tutti i problemi riscontrati durante lo sviluppo del progetto vengono registrati in un \textit{Issues Log}, in cui ogni
+problema viene descritto con il seguente schema:
+\begin{itemize}
+    \item ID del problema;
+    \item data in cui il problema è stato riscontrato;
+    \item descrizione del problema;
+    \item descrizione dell'impatto del problema sul progetto, se non sarà risolto;
+    \item definizione del proprietario del problema;
+    \item azione che deve essere intrapresa per risolvere il problema;
+    \item stato attuale del problema;
+    \item esito della risoluzione del problema.
+\end{itemize}
+Il documento viene aggiornato a seguito di un \textit{Problem Management Meeting}.
+Nella \cref{tab:issues-log} mostriamo un esempio di \textit{Issues Log}, in cui viene riportato un problema riscontrato.
 
-\section{Variance reports}
+\begin{table}[!htb]
+    \centering
+    \makebox[\textwidth][c]{
+    \begin{tabular}{|p{0.05\linewidth}|p{0.15\linewidth}|p{0.2\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.1\linewidth}|p{0.1\linewidth}|}
+        \hline
+        ID & Data & Descrizione & Impatto & Proprietario & Azione & Stato & Esito \\ \hline
+        1 & 23/06/2026 & Problema nell'aggiornamento del software delle colonnine di ricarica dovuto ad una tecnologia obsoleta & Ritardo nella durata del progetto &
+        Senior Developer 1 - Backend & Sostituzione della tecnologia obsoleta con una più moderna & Risolto & Risolto con successo \\ \hline
+    \end{tabular}
+    }
+    \caption{Esempio di \textit{Issues Log}}
+    \label{tab:issues-log}
+\end{table}
 
-\section{Issues Log} % quando fare l'aggiornamento (Problem Management Meeting)
-
-\section{Scope Bank} % quando fare l'aggiornamento
-% Problem Escalation Strategy
+\section{Scope Bank}
+In fase di planning è stata stabilita una \textit{Scope Bank} pari al 10\% del tempo totale stimato per il
+completamento del progetto. Seguendo la nostra strategia di \textit{Problem Escalation}, in caso di problemi o ritardi,
+accediamo alla \textit{Scope Bank}, mantenendo se possibile la questione interna; altrimenti, si coinvolge il senior
+management per ottenere più risorse, e solo come ultima opzione si contatta il cliente, per contrattare un'estensione
+della schedula o modifiche dello scope. \\
+La \textit{Scope Bank} viene aggiornata ogni volta che viene approvato un cambiamento dello scope, o quando viene
+utilizzata per risolvere un problema, a seguito di un \textit{Problem Management Meeting}.
 
 \end{document}
