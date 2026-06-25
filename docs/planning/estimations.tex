@@ -132,17 +132,17 @@ necessarie per ogni task. Nella \Cref{table:resources_estimated} sono riportati 
         \hline
         Attività & Categoria & Numero di risorse \\
         \hline
-        1.1.1   & Backend  & 2  \\
+        1.1.1   & Backend  & 1 Senior + 1 Junior  \\
         \hline
-        1.1.2.1 & Backend  & 1  \\
+        1.1.2.1 & Backend  & 1 Senior  \\
         \hline
-        1.2.1   & Frontend & 1  \\
+        1.2.1   & Frontend & 1 Junior  \\
         \hline
-        4.2.1   & Frontend & 2  \\
+        4.2.1   & Frontend & 1 Senior + 1 Junior  \\
         \hline
-        4.2.2   & Backend  & 2  \\
+        4.2.2   & Backend  & 1 Senior + 1 Junior  \\
         \hline
-        5.1.2   & Backend  & 3  \\
+        5.1.2   & Backend  & 1 Senior + 2 Junior  \\
         \hline
     \end{tabular}
     \caption{Stima del numero di risorse necessarie per ogni attività.}
@@ -170,5 +170,39 @@ Nella \Cref{table:duration_estimated} sono riportati alcuni esempi di stime.
     \caption{Stima della durata di ogni attività.}
     \label{table:duration_estimated}
 \end{table}
+
+\section{Stima dei costi}
+Per stimare i costi del progetto si è considerato il costo orario di ogni risorsa (50 euro per le risorse senior e di
+25 euro per le risorse junior), considerando che la durata delle attività è stata stimata in giorni lavorativi di 8
+ore, perché tutti i membri del team sono a tempo pieno sul progetto. \\
+Nella \Cref{table:cost_estimated} sono riportati alcuni esempi di stime, in cui il costo di ogni attività è calcolato
+come il prodotto tra il costo delle risorse stimate (differenziato per tipo di risorsa) e la durata stimata
+dell'attività.
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Attività & Costo (euro) \\
+        \hline
+        1.2.1    & $25 \times 8 \times 3 = 600$  \\
+        \hline
+        4.2.2    & $(50 + 25) \times 8 \times 5 = 3000$  \\
+        \hline
+    \end{tabular}
+    \caption{Stima dei costi di ogni attività.}
+    \label{table:cost_estimated}
+\end{table}
+
+\section{Cash Flow Management}
+Dopo aver stimato i costi di tutte le attività, si è stimato che il costo totale del progetto è di 140.000 euro.
+Data la richiesta del committente di rimanere entro un budget di 200.000 euro, la nostra proposta economica per la
+realizzazione del progetto consiste in 180.000 euro. \\
+Il piano di pagamento proposto prevede un anticipo del 20\% alla firma del contratto, e il restante suddiviso in:
+\begin{itemize}
+    \item 25\% in corrispondenza della milestone 1;
+    \item 25\% in corrispondenza della milestone 2;
+    \item 30\% alla consegna del progetto.
+\end{itemize}
 
 \end{document}
