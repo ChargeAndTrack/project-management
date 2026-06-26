@@ -28,9 +28,12 @@
 
 \begin{document}
 \maketitle
+\tableofcontents
 
-Considerando la CoS 1 specificata nel POS, che prevede che l'applicazione debba essere implementata come web app e app
-mobile, suddividiamo la WBS in due parti, una per la web app e una per l'app mobile.\\
+\newpage
+
+Considerando la CoS 1 specificata nel POS, che prevede che l'applicazione debba essere implementata sia come web app
+che come app mobile, suddividiamo la WBS in due parti, una per la web app e una per l'app mobile.\\
 
 \section{WBS per la web app}
 \textbf{Goal:} entro un anno sviluppare un'applicazione software per gestire le colonnine di ricarica dell'azienda in
@@ -43,7 +46,7 @@ modo da ottenere un aumento del fatturato del 10\% entro l'anno successivo.
             \item creazione di un database per gli account degli utenti;
             \item adozione di misure di sicurezza per proteggere i dati degli utenti;
             \begin{enumerate}
-                \item implementazione di autenticazione a due fattori;
+                \item implementazione del meccanismo di autenticazione a due fattori;
                 \item memorizzazione di dati sensibili in maniera criptata;
                 \item gestione sicura delle sessioni;
             \end{enumerate}
@@ -68,7 +71,7 @@ modo da ottenere un aumento del fatturato del 10\% entro l'anno successivo.
         \item memorizzazione delle impostazioni personalizzate;
         \begin{enumerate}
             \item memorizzazione e gestione del tema scelto dall'utente;
-            \item memorizzazione e gestione dell'organizzazione personalizzata dei contenuti dell'home page;
+            \item memorizzazione e gestione personalizzata dell'organizzazione dei contenuti dell'home page;
         \end{enumerate}
         \item modifica dati dell'account;
         \begin{enumerate}
@@ -102,9 +105,9 @@ modo da ottenere un aumento del fatturato del 10\% entro l'anno successivo.
     registrata;
     \begin{enumerate}
         \item aggiunta della nozione di ricarica nei dati dei database;
-        \item aggiornamento del software delle colonnine di ricarica per associare una ricarica ad un'auto registrata
-        con l'applicazione;
-        \item aggiunta funzionalità per avviare una ricarica associando un'auto registrata con una colonnina di ricarica;
+        \item aggiornamento del software delle colonnine di ricarica per associare con l'applicazione una ricarica ad
+        un'auto registrata;
+        \item aggiunta funzionalità per avviare una ricarica associando un'auto registrata ad una colonnina di ricarica;
         \begin{enumerate}
             \item creazione di una schermata per avviare una ricarica;
             \item implementazione della logica per avviare una ricarica;
@@ -123,10 +126,10 @@ modo da ottenere un aumento del fatturato del 10\% entro l'anno successivo.
         \end{enumerate}
     \end{enumerate}
     \item permettere agli utenti di pianificare un itinerario di viaggio per ottenere un percorso comprendente le soste
-    di ricarica necessarie.
+    di ricarica necessarie;
     \begin{enumerate}
         \item generazione di un percorso ottimizzato rispetto al tempo di percorrenza, che consideri le soste di ricarica
-        necessarie in base alla batteria dell'auto utilizzata per il viaggio
+        necessarie in base alla batteria dell'auto utilizzata per il viaggio;
         \begin{enumerate}
             \item raccolta e pulizia dei dati necessari alla generazione;
             \item implementazione di un algoritmo per generare un percorso ottimizzato rispetto al tempo di percorrenza,
@@ -144,7 +147,7 @@ modo da ottenere un aumento del fatturato del 10\% entro l'anno successivo.
     \begin{enumerate}
         \item integrazione con il GPS del dispositivo mobile;
         \item integrazione con il sistema di notifiche del dispositivo mobile;
-        \item integrazione con la fotocamera per la scansione di un codice QR;
+        \item integrazione con la fotocamera del dispositivo mobile per la scansione di un codice QR;
     \end{enumerate}
     \item pubblicazione dell'app mobile sugli store ufficiali;
     \begin{enumerate}
@@ -162,7 +165,7 @@ Per ogni requisito di backend si specificano criteri di accettazione delle funzi
     \item l'utente deve poter inserire email e password;
     \item la password deve essere sufficientemente sicura (almeno 8 caratteri, almeno un numero, almeno un carattere speciale);
     \item la password non deve essere memorizzata in chiaro nel database;
-    \item deve essere presente un sistema di autenticazione a due fattori;
+    \item deve essere presente un meccanismo di autenticazione a due fattori;
     \item deve essere inviata un'email di conferma all'utente dopo la registrazione.
 \end{itemize}
 

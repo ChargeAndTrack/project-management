@@ -58,7 +58,7 @@ progetto. Lo scostamento rispetto alla schedula, se positivo indica un ritardo, 
             ytick={-3,-2,-1,0,1,2,3},
             grid=major,
             xlabel={Mese},
-            ylabel={Scostamento da schedula},
+            ylabel={Scostamento da schedula (settimane)},
         ]
             \addplot[
                 black,
@@ -81,11 +81,12 @@ progetto. Lo scostamento rispetto alla schedula, se positivo indica un ritardo, 
             };
         \end{axis}
     \end{tikzpicture}
-    \caption{Cumulative report di 6 mesi}
+    \caption{Cumulative report di 6 mesi.}
     \label{fig:cumulative-report}
 \end{figure}
 
 \section{Exception reports}
+Ci basiamo sul cumulative report riportato nella sezione precedente, per mostrare un esempio di exception report.
 Nella \cref{fig:cumulative-report} si può notare come nel primo mese di lavoro il progetto abbia accumulato un lieve
 ritardo, probabilmente dovuto ad una sottostima del tempo di startup necessario. Successivamente, è stato recuperato il
 ritardo accumulato, arrivando ad essere in anticipo rispetto alla schedula. \\
@@ -120,7 +121,7 @@ Nella \cref{tab:issues-log} mostriamo un esempio di \textit{Issues Log}, in cui 
         Senior Developer 1 - Backend & Sostituzione della tecnologia obsoleta con una più moderna & Risolto & Risolto con successo \\ \hline
     \end{tabular}
     }
-    \caption{Esempio di \textit{Issues Log}}
+    \caption{Esempio di \textit{Issues Log}.}
     \label{tab:issues-log}
 \end{table}
 

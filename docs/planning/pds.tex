@@ -32,9 +32,9 @@
 \section{Opportunità}
 L'azienda ChargeAndTrack gestisce una distribuzione di colonnine di ricarica per auto elettriche in tutta Italia.
 E' stata effettuata un'analisi di mercato dei principali distributori di colonnine di ricarica sul territorio
-italiano, e si è riscontrato che nessuno di essi offre soluzioni digitali per la ricerca e l'utilizzo di
+italiano, e si è riscontrato che nessuno di essi offre soluzioni digitali per la ricerca e l'utilizzo delle
 colonnine di ricarica. Inoltre, è stata condotta un'indagine tra i clienti e si è riscontrato che il 70\% di essi
-sarebbe interessato ad una soluzione digitale. In particolare, ha trovato maggiore interesse la possibilità di
+sarebbe interessato ad una soluzione digitale. In particolare, ha trovato un alto interesse la possibilità di
 pianificare un itinerario di viaggio con soste di ricarica, e la possibilità di ricevere aggiornamenti in tempo reale
 sulla ricarica di una propria auto.
 
@@ -63,6 +63,8 @@ Relativamente alla numerazione degli obiettivi, si possono individuare i seguent
     potrebbe subire dei ritardi;
     \item Assunzione: le colonnine di ricarica sono già dotate dell'hardware necessario per supportare le funzionalità
     richieste dall'applicazione;
+    \item Rischio: in alcune zone con basso segnale, l'aggiornamento in tempo reale sulla ricarica di una propria auto
+    potrebbe subire dei ritardi.
 \end{enumerate}
 
 \section{Conditions of Satisfaction (CoS)}
@@ -79,9 +81,9 @@ Relativamente alla numerazione degli obiettivi, si possono individuare i seguent
     \item Aumento del fatturato di almeno il 10\% entro un anno dal rilascio dell'applicazione, rispetto al fatturato
     dell'anno 2025;
     \item ottenere una valutazione media di almeno 7 punti su 10 da parte degli utenti entro un anno dal rilascio
-    dell'applicazione, considerando almeno 100 voti. La valutazione viene richiesta a tutti gli utenti almeno una volta
-    entro un anno dal rilascio dell'applicazione, tramite indagine interna all'applicazione, e se ne calcolerà la
-    media al termine della raccolta.
+    dell'applicazione, considerando almeno 100 voti. La valutazione viene richiesta a tutti gli utenti entro un anno
+    dal rilascio dell'applicazione, tramite indagine interna all'applicazione, e se ne calcolerà la media al termine
+    della raccolta.
 \end{itemize}
 
 \section{Scelte}
@@ -92,21 +94,22 @@ Relativamente alla numerazione degli obiettivi, si possono individuare i seguent
     dell'applicazione web;
     \item utilizzare un'architettura a microservizi per il backend, sfruttando Docker per la containerizzazione
     dei microservizi e Kubernetes per il deploy e l'orchestrazione dei container;
-    \item ogni microservizio dovrà adottare un'architettura esagonale;
+    \item ogni microservizio dovrà adottare un'architettura esagonale.
 \end{itemize}
 
 \subsection{Scelte tecnologiche}
 \begin{itemize}
     \item dopo aver preso in considerazione database relazionali e documentali, si è deciso di utilizzare MongoDB come
-    database documentale per la sua flessibilità e scalabilità, che si adattano meglio alle esigenze dell'applicazione,
+    database documentale per la sua flessibilità e scalabilità, che si adatta meglio alle esigenze dell'applicazione,
     oltre ad essere il più conosciuto tra i membri del team;
     \item lo sviluppo deve seguire un approccio di Test-Driven Development (TDD);
     \item utilizzare Kotlin come linguaggio di programmazione per il backend, e Vue.js sfruttando TypeScript per il
     frontend della web app;
     \item in riferimento all'obiettivo 3, come metodo di associazione tra un'auto registrata e una colonnina di
-    ricarica, si è deciso di utilizzare un codice QR, in quanto già presente nel software delle colonnine di ricarica;
-    \item in riferimento all'obiettivo 1, l'autenticazione degli utenti avverrà tramite email e password, con
-    l'adozione dell'autenticazione a due fattori tramite l'invio di un codice temporaneo via email.
+    ricarica, si è deciso di utilizzare un codice QR, in quanto il meccanismo di lettura è già presente nel software
+    delle colonnine di ricarica;
+    \item in riferimento all'obiettivo 1, dato che l'autenticazione degli utenti avverrà tramite email e password,
+    il meccanismo di autenticazione a due fattori sarà implementato tramite l'invio di un codice temporaneo via email.
 \end{itemize}
 
 \end{document}
